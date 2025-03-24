@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="main-container">
       <div class="top">
           <div class="top-op">
-              <div class="btn">
+              <div class="left-buttons">
                 <el-upload
                   :show-file-list="false"
                   :with-credentials="true"
@@ -10,163 +10,184 @@
                   :http-request="addFile"
                   :accept="fileAccept"
                 >
-                    <el-button type="primary">
+                    <el-button type="primary" class="upload-btn">
                       <span class="iconfont icon-upload"></span>
-                      上传
+                      上传文件
                     </el-button>
                 </el-upload>
+                
+                <el-button type="success" @click="newFolder" class="folder-btn">
+                  <span class="iconfont icon-folder-add"></span>
+                  新建文件夹
+                </el-button>
               </div>
-              <el-button type="success" @click="newFolder">
-                <span class="iconfont icon-folder-add"></span>
-                新建文件夹
-              </el-button>
-              <el-button
-                type="danger"
-                :disabled="selectFileIdList.length == 0"
-                @click="delFileBatch"
-              >
-                <span class="iconfont icon-del"></span>
-                批量删除
-              </el-button>
-              <el-button
-                type="warning"
-                :disabled="selectFileIdList.length == 0"
-                @click="moveFolderBatch"
-              >
-                <span class="iconfont icon-move"></span>
-                批量移动
-              </el-button>
-              <div class="search-panel">
-                <!-- 搜索文件 -->
-                <el-input
-                  clearable
-                  placeholder="请输入文件名搜索"
-                  v-model="fileNameFuzzy"
-                  @keyup.enter="search"
-                >
-                    <template #suffix>
-                        <i class="iconfont icon-search" @click="search"></i>
-                    </template>
-                </el-input>
+
+              <div class="right-buttons">
+                <div class="search-panel">
+                  <el-input
+                    clearable
+                    placeholder="搜索文件..."
+                    v-model="fileNameFuzzy"
+                    @keyup.enter="search"
+                    class="search-input"
+                  >
+                      <template #prefix>
+                          <i class="iconfont icon-search"></i>
+                      </template>
+                  </el-input>
+                </div>
+
+                <div class="action-buttons">
+                  <el-button
+                    type="danger"
+                    :class="['action-btn', {'disabled': selectFileIdList.length == 0}]"
+                    :disabled="selectFileIdList.length == 0"
+                    @click="delFileBatch"
+                  >
+                    <span class="iconfont icon-del"></span>
+                    批量删除
+                  </el-button>
+                  
+                  <el-button
+                    type="warning"
+                    :class="['action-btn', {'disabled': selectFileIdList.length == 0}]"
+                    :disabled="selectFileIdList.length == 0"
+                    @click="moveFolderBatch"
+                  >
+                    <span class="iconfont icon-move"></span>
+                    批量移动
+                  </el-button>
+
+                  <div class="refresh-btn" @click="loadDataList">
+                    <i class="iconfont icon-refresh"></i>
+                  </div>
+                </div>
               </div>
-              <div class="iconfont icon-refresh" @click="loadDataList"></div>
           </div>
-          <!-- 导航 -->
+          
           <Navigation ref="navigationRef" @navChange="navChange"></Navigation>
       </div>
-      <div class="file-list" v-if="tableData.list && tableData.list.length > 0">
-        <Table
-          ref="dataTableRef"
-          :columns="columns"
-          :dataSource="tableData"
-          :fetch="loadDataList"
-          :initFetch="false"
-          :options="tableOptions"
-          @rowSelected="rowSelected"
-        >
-        <template #fileName="{ index, row }">
-            <div
-              class="file-item"
-              @mouseenter="showOp(row)"
-              @mouseleave="cancelShowOp(row)"
-            >
-              <template
-                v-if="(row.fileType == 3 || row.fileType == 1) && row.status == 2"
+
+      <div class="content-area" :class="{'empty': !tableData.list || tableData.list.length === 0}">
+        <div class="file-list" v-if="tableData.list && tableData.list.length > 0">
+          <Table
+            ref="dataTableRef"
+            :columns="columns"
+            :dataSource="tableData"
+            :fetch="loadDataList"
+            :initFetch="false"
+            :options="tableOptions"
+            @rowSelected="rowSelected"
+          >
+          <template #fileName="{ index, row }">
+              <div
+                class="file-item"
+                @mouseenter="showOp(row)"
+                @mouseleave="cancelShowOp(row)"
               >
-                <Icon :cover="row.fileCover" :width="32"></Icon>
-              </template>
-              <template v-else>
-                <Icon v-if="row.folderType == 0" :fileType="row.fileType"></Icon>
-                <Icon v-if="row.folderType == 1" :fileType="0"></Icon>
-              </template>
-              <span class="file-name" v-if="!row.showEdit" :title="row.fileName">
-                <span @click="preview(row)">{{ row.fileName }}</span>
-                <span v-if="row.status == 0" class="transfer-status">转码中</span>
-                <span v-if="row.status == 1" class="transfer-status transfer-fail"
-                  >转码失败</span
-                >
-              </span>
-              <div class="edit-panel" v-if="row.showEdit">
-                <el-input
-                  v-model.trim="row.fileNameReal"
-                  ref="editNameRef"
-                  :maxLength="190"
-                  @keyup.enter="saveNameEdit(index)"
-                >
-                  <template #suffix>{{ row.fileSuffix }}</template>
-                </el-input>
-                <span
-                  :class="[
-                    'iconfont icon-right1',
-                    row.fileNameReal ? '' : 'not-allow',
-                  ]"
-                  @click="saveNameEdit(index)"
-                ></span>
-                <span
-                  class="iconfont icon-error"
-                  @click="cancelNameEdit(index)"
-                ></span>
+                <div class="file-icon">
+                  <template
+                    v-if="(row.fileType == 3 || row.fileType == 1) && row.status == 2"
+                  >
+                    <Icon :cover="row.fileCover" :width="40"></Icon>
+                  </template>
+                  <template v-else>
+                    <Icon v-if="row.folderType == 0" :fileType="row.fileType" :width="40"></Icon>
+                    <Icon v-if="row.folderType == 1" :fileType="0" :width="40"></Icon>
+                  </template>
+                </div>
+
+                <div class="file-info">
+                  <span class="file-name" v-if="!row.showEdit" :title="row.fileName">
+                    <span @click="preview(row)">{{ row.fileName }}</span>
+                    <span v-if="row.status == 0" class="transfer-status">转码中</span>
+                    <span v-if="row.status == 1" class="transfer-status transfer-fail">转码失败</span>
+                  </span>
+                  
+                  <div class="edit-panel" v-if="row.showEdit">
+                    <el-input
+                      v-model.trim="row.fileNameReal"
+                      ref="editNameRef"
+                      :maxLength="190"
+                      @keyup.enter="saveNameEdit(index)"
+                    >
+                      <template #suffix>{{ row.fileSuffix }}</template>
+                    </el-input>
+                    <div class="edit-buttons">
+                      <span
+                        :class="['iconfont icon-right1', {'not-allow': !row.fileNameReal}]"
+                        @click="saveNameEdit(index)"
+                      ></span>
+                      <span
+                        class="iconfont icon-error"
+                        @click="cancelNameEdit(index)"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="file-actions" v-if="row.showOp && row.fileId && row.status == 2">
+                  <el-tooltip content="分享" placement="top">
+                    <span class="iconfont action-icon icon-share1" @click="share(row)"></span>
+                  </el-tooltip>
+                  
+                  <el-tooltip content="下载" placement="top" v-if="row.folderType == 0">
+                    <span class="iconfont action-icon icon-download" @click="download(row)"></span>
+                  </el-tooltip>
+                  
+                  <el-tooltip content="删除" placement="top">
+                    <span class="iconfont action-icon icon-del" @click="delFile(row)"></span>
+                  </el-tooltip>
+                  
+                  <el-tooltip content="重命名" placement="top">
+                    <span class="iconfont action-icon icon-edit" @click="editFileName(index)"></span>
+                  </el-tooltip>
+                  
+                  <el-tooltip content="移动" placement="top">
+                    <span class="iconfont action-icon icon-move" @click="moveFolder(row)"></span>
+                  </el-tooltip>
+                </div>
               </div>
-              <span class="op">
-                <template v-if="row.showOp && row.fileId && row.status == 2">
-                    <span class="iconfont icon-share1" @click="share(row)"
-                      >分享</span
-                    >
-                    <span
-                      class="iconfont icon-download"
-                      v-if="row.folderType == 0"
-                      @click="download(row)"
-                      >下载</span
-                    >
-                    <span class="iconfont icon-del" @click="delFile(row)"
-                      >删除</span
-                    >
-                    <span class="iconfont icon-edit" @click="editFileName(index)"
-                      >重命名</span
-                    >
-                    <span class="iconfont icon-move" @click="moveFolder">移动</span>
-                </template>
-              </span>
-            </div>
-        </template>
-        <template #fileSize="{index, row}">
-            <span v-if="row.fileSize">{{
-              proxy.Utils.size2Str(row.fileSize)
-            }}</span>
-        </template>
-        </Table>
-      </div>
-      <div class="no-data" v-else>
-        <div class="no-data-inner">
-          <Icon iconName="no_data" :width="120" fit="fill"></Icon>
-          <div class="tips">当前目录为空, 上传你的第一个文件吧</div>
-          <div class="op-list">
-            <el-upload
-              :show-file-list="false"
-              :with-credentials="true"
-              :multiple="true"
-              :http-request="addFile"
-              :accept="fileAccept"
-            >
-              <div class="op-item">
-                <Icon iconName="file" :width="60"></Icon>
-                <div>上传文件</div>
+          </template>
+          <template #fileSize="{index, row}">
+              <span v-if="row.fileSize" class="file-size">{{
+                proxy.Utils.size2Str(row.fileSize)
+              }}</span>
+          </template>
+          </Table>
+        </div>
+
+        <div class="no-data" v-else>
+          <div class="no-data-inner">
+            <Icon iconName="no_data" :width="150" fit="fill"></Icon>
+            <div class="tips">当前目录为空，开始创建或上传内容吧</div>
+            <div class="op-list">
+              <el-upload
+                :show-file-list="false"
+                :with-credentials="true"
+                :multiple="true"
+                :http-request="addFile"
+                :accept="fileAccept"
+              >
+                <div class="op-item upload">
+                  <Icon iconName="file" :width="70"></Icon>
+                  <div>上传文件</div>
+                </div>
+              </el-upload>
+              <div class="op-item folder" v-if="category == 'all'" @click="newFolder">
+                <Icon iconName="folder" :width="70"></Icon>
+                <div>新建目录</div>
               </div>
-            </el-upload>
-            <div class="op-item" v-if="category == 'all'" @click="newFolder">
-              <Icon iconName="folder" :width="60"></Icon>
-              <div>新建目录</div>
             </div>
           </div>
         </div>
       </div>
+
       <FolderSelect
         ref="folderSelectRef"
         @folderSelect="moveFolderDone"
       ></FolderSelect>
-      <!-- 预览 -->
       <Preview ref="previewRef"></Preview>
-      <!-- 分享 -->
       <ShareFile ref="shareRef"></ShareFile>
   </div>
 </template>
@@ -491,208 +512,272 @@ const share = (row) => {
 </script>
 
 <style lang="scss" scoped>
-.top {
+.main-container {
+  height: 100vh;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+
+  .top {
     background: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
 
     .top-op {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+
+      .left-buttons {
+        display: flex;
+        gap: 12px;
+
+        .upload-btn, .folder-btn {
+          height: 36px;
+          padding: 0 20px;
+          border-radius: 8px;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          }
+
+          .iconfont {
+            margin-right: 8px;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .right-buttons {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
-        gap: 10px;
-
-        .btn {
-            .el-button {
-                border-radius: 6px;
-                padding: 10px 20px;
-                transition: all 0.3s;
-                
-                &:hover {
-                    transform: translateY(-2px);
-                }
-
-                .iconfont {
-                    margin-right: 5px;
-                }
-            }
-        }
+        gap: 16px;
 
         .search-panel {
-            flex: 1;
-            margin: 0 15px;
+          .search-input {
+            width: 280px;
 
-            .el-input {
-                .el-input__wrapper {
-                    border-radius: 20px;
-                    box-shadow: 0 0 0 1px #dcdfe6 inset;
-                    
-                    &:hover {
-                        box-shadow: 0 0 0 1px #409eff inset;
-                    }
-                }
+            :deep(.el-input__wrapper) {
+              border-radius: 20px;
+              padding: 0 16px;
+              height: 36px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+              transition: all 0.3s ease;
 
-                .icon-search {
-                    cursor: pointer;
-                    color: #909399;
-                    font-size: 16px;
-                    
-                    &:hover {
-                        color: #409eff;
-                    }
-                }
+              &:hover, &:focus {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+              }
             }
+          }
         }
 
-        .icon-refresh {
-            font-size: 20px;
-            color: #909399;
-            cursor: pointer;
-            transition: all 0.3s;
-            
-            &:hover {
-                color: #409eff;
-                transform: rotate(180deg);
-            }
+        .action-buttons {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          .action-btn {
+            height: 36px;
+            border-radius: 8px;
+            padding: 0 16px;
+          }
+
+          .refresh-btn {
+            width: 36px;
+            height: 36px;
+          }
         }
+      }
     }
-}
+  }
 
-.file-list {
+  .content-area {
     background: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    padding: 16px;
+    flex: 1;
+    overflow: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
 
-    .file-item {
+    &.empty {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .file-list {
+      height: 100%;
+      overflow: auto;
+
+      :deep(.el-table) {
+        height: 100%;
+      }
+
+      .file-item {
         display: flex;
         align-items: center;
         padding: 8px;
-        border-radius: 6px;
-        transition: all 0.3s;
+        border-radius: 8px;
+        transition: all 0.3s ease;
         
         &:hover {
-            background: #f5f7fa;
+          background: #f8fafd;
+          transform: translateX(4px);
         }
 
-        .file-name {
-            margin-left: 10px;
-            flex: 1;
+        .file-icon {
+          margin-right: 12px;
+        }
+
+        .file-info {
+          flex: 1;
+          
+          .file-name {
+            font-size: 14px;
+            color: #303133;
             cursor: pointer;
-            color: #606266;
 
             &:hover {
-                color: #409eff;
+              color: #409eff;
             }
-
+            
             .transfer-status {
-                margin-left: 10px;
-                font-size: 12px;
-                padding: 2px 6px;
-                border-radius: 4px;
-                background: #e6a23c;
-                color: #fff;
+              margin-left: 10px;
+              padding: 2px 6px;
+              border-radius: 10px;
+              font-size: 12px;
+              background: #e6a23c;
+              color: #fff;
 
-                &.transfer-fail {
-                    background: #f56c6c;
-                }
+              &.transfer-fail {
+                background: #f56c6c;
+              }
             }
-        }
+          }
 
-        .op {
-            display: none;
-            gap: 15px;
-
-            .iconfont {
-                cursor: pointer;
-                font-size: 14px;
-                color: #606266;
-                
-                &:hover {
-                    color: #409eff;
-                }
-            }
-        }
-
-        &:hover .op {
-            display: flex;
-        }
-
-        .edit-panel {
-            flex: 1;
+          .edit-panel {
             display: flex;
             align-items: center;
             gap: 10px;
 
             .el-input {
-                .el-input__wrapper {
-                    border-radius: 4px;
-                }
+              :deep(.el-input__wrapper) {
+                border-radius: 8px;
+              }
             }
 
-            .iconfont {
+            .edit-buttons {
+              display: flex;
+              gap: 6px;
+
+              .iconfont {
+                font-size: 18px;
                 cursor: pointer;
-                font-size: 16px;
 
                 &.icon-right1 {
-                    color: #67c23a;
-                    
-                    &.not-allow {
-                        color: #c0c4cc;
-                        cursor: not-allowed;
-                    }
+                  color: #67c23a;
+                  
+                  &.not-allow {
+                    color: #c0c4cc;
+                    cursor: not-allowed;
+                  }
                 }
 
                 &.icon-error {
-                    color: #f56c6c;
+                  color: #f56c6c;
                 }
+              }
             }
+          }
         }
-    }
-}
 
-.no-data {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+        .file-actions {
+          display: none;
+          gap: 12px;
+          padding: 0 10px;
 
-    .no-data-inner {
-        text-align: center;
-
-        .tips {
-            color: #909399;
-            margin: 20px 0;
+          .iconfont {
             font-size: 16px;
+            color: #606266;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+
+            &::after {
+              margin-left: 4px;
+              font-size: 12px;
+            }
+
+            &.icon-share1::after {
+              content: "分享";
+            }
+
+            &.icon-download::after {
+              content: "下载";
+            }
+
+            &.icon-del::after {
+              content: "删除";
+            }
+
+            &.icon-edit::after {
+              content: "重命名";
+            }
+
+            &.icon-move::after {
+              content: "移动";
+            }
+
+            &:hover {
+              color: #409eff;
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        &:hover .file-actions {
+          display: flex;
+        }
+      }
+    }
+
+    .no-data {
+      padding: 30px;
+
+      .no-data-inner {
+        .tips {
+          margin: 20px 0;
         }
 
         .op-list {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
+          gap: 40px;
+          margin-top: 30px;
 
-            .op-item {
-                cursor: pointer;
-                padding: 20px;
-                border-radius: 8px;
-                transition: all 0.3s;
-                
-                &:hover {
-                    background: #f5f7fa;
-                    transform: translateY(-2px);
-                }
-
-                div {
-                    margin-top: 10px;
-                    color: #606266;
-                }
+          .op-item {
+            padding: 24px;
+            border-radius: 12px;
+            
+            &:hover {
+              transform: translateY(-3px);
             }
+
+            div {
+              margin-top: 10px;
+            }
+          }
         }
+      }
     }
+  }
 }
 </style>
