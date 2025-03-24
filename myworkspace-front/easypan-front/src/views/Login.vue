@@ -488,7 +488,7 @@ const qqLogin = async () => {
                     border: 0;
                     letter-spacing: 1px;
                     line-height: 44px;
-                    box-shadow: 3px 0px 0px #04ebfc;
+                    //box-shadow: 3px 0px 0px #04ebfc;
                     outline: transparent;
                     position: relative;
                 }

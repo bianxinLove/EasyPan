@@ -155,7 +155,7 @@ const checkShare = async () => {
             background: #fff;
             border-radius: 5px;
             overflow: hidden;
-            box-shadow: 0 0 7px 1px #5757574f;
+            //box-shadow: 0 0 7px 1px #5757574f;
             .file-info {
                 padding: 10px 20px;
                 background: #01f7ff;
@@ -202,28 +202,28 @@ const checkShare = async () => {
                         border: 0;
                         color: #fff;
                         line-height: 33px;
-                        box-shadow: 6px 0px 0px #04ebfc;
+                        //box-shadow: 6px 0px 0px #04ebfc;
                         outline: transparent;
                         position: relative;
                         }
-                        button::after {
-                        --slice-0: inset(50% 50% 50% 50%);
-                        --slice-1: inset(80% -6px 0 0);
-                        --slice-2: inset(50% -6px 30% 0);
-                        --slice-3: inset(10% -6px 85% 0);
-                        --slice-4: inset(40% -6px 43% 0);
-                        --slice-5: inset(80% -6px 5% 0);
-                        content: 'LanVinci';
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #ff0101 5%);
-                        text-shadow: -3px -3px 0px #f8f405, 3px 3px 0px #00E6F6;
-                        clip-path: var(--slice-0);
-                        }
+                        //button::after {
+                        //--slice-0: inset(50% 50% 50% 50%);
+                        //--slice-1: inset(80% -6px 0 0);
+                        //--slice-2: inset(50% -6px 30% 0);
+                        //--slice-3: inset(10% -6px 85% 0);
+                        //--slice-4: inset(40% -6px 43% 0);
+                        //--slice-5: inset(80% -6px 5% 0);
+                        //content: 'LanVinci';
+                        //display: block;
+                        //position: absolute;
+                        //top: 0;
+                        //left: 0;
+                        //right: 0;
+                        //bottom: 0;
+                        //background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #ff0101 5%);
+                        //text-shadow: -3px -3px 0px #f8f405, 3px 3px 0px #00E6F6;
+                        //clip-path: var(--slice-0);
+                        //}
                         button:hover::after {
                         animation: 1s glitch;
                         animation-timing-function: steps(2, end);

@@ -99,28 +99,28 @@ const close = () => {
         color: #fff;
         letter-spacing: 1px;
         line-height: 44px;
-        box-shadow: 6px 0px 0px #04ebfc;
+        //box-shadow: 6px 0px 0px #04ebfc;
         outline: transparent;
         position: relative;
     }
-    .dialog-buttons::after {
-        --slice-0: inset(50% 50% 50% 50%);
-        --slice-1: inset(80% -6px 0 0);
-        --slice-2: inset(50% -6px 30% 0);
-        --slice-3: inset(10% -6px 85% 0);
-        --slice-4: inset(40% -6px 43% 0);
-        --slice-5: inset(80% -6px 5% 0);
-        content: 'LanVinci';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #ff0101 5%);
-        text-shadow: -3px -3px 0px #f8f405, 3px 3px 0px #00E6F6;
-        clip-path: var(--slice-0);
-        }
+    //.dialog-buttons::after {
+    //    --slice-0: inset(50% 50% 50% 50%);
+    //    --slice-1: inset(80% -6px 0 0);
+    //    --slice-2: inset(50% -6px 30% 0);
+    //    --slice-3: inset(10% -6px 85% 0);
+    //    --slice-4: inset(40% -6px 43% 0);
+    //    --slice-5: inset(80% -6px 5% 0);
+    //    content: 'LanVinci';
+    //    display: block;
+    //    position: absolute;
+    //    top: 0;
+    //    left: 0;
+    //    right: 0;
+    //    bottom: 0;
+    //    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #ff0101 5%);
+    //    text-shadow: -3px -3px 0px #f8f405, 3px 3px 0px #00E6F6;
+    //    clip-path: var(--slice-0);
+    //    }
         .dialog-buttons:hover::after {
         animation: 1s glitch;
         animation-timing-function: steps(2, end);

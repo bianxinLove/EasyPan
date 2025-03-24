@@ -57,6 +57,26 @@ const dialogConfig = ref({
             click: (e) => {
                 submitForm();
             },
+            // class: "select-button",
+            // style: {
+            //     backgroundColor: "#409eff",
+            //     borderColor: "#409eff",
+            //     color: "#fff",
+            //     boxShadow: "none",
+            //     outline: "none",
+            //     border: "none",
+            //     transition: "none",
+            //     "&:hover": {
+            //         backgroundColor: "#66b1ff",
+            //         borderColor: "#66b1ff",
+            //         boxShadow: "none",
+            //         border: "none",
+            //         transform: "none"
+            //     },
+            //     "&:before, &:after": {
+            //         display: "none"
+            //     }
+            // }
         },
     ],
 });

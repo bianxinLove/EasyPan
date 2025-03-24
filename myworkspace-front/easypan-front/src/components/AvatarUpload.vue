@@ -79,7 +79,6 @@ const uploadImage = async (file) => {
         }
         .op {
             position: absolute;
-            //color: #f701ff;
             color: #4F4F4F;
             top: 80px;
         }
@@ -88,13 +87,13 @@ const uploadImage = async (file) => {
         margin-left: 10px;
         vertical-align: bottom;
         .select-button {
-            background: linear-gradient(45deg, transparent 5%, #ff01c8 5%);
-            border: 0;
+            background-color: #409eff;
+            border-color: #409eff;
             color: #fff;
-            letter-spacing: 1px;
-            box-shadow: 6px 0px 0px #ffee00;
-            outline: transparent;
-            position: relative;
+            &:hover {
+                background-color: #66b1ff;
+                border-color: #66b1ff;
+            }
         }
     }
 }

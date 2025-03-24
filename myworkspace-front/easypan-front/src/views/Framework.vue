@@ -339,7 +339,7 @@ getUseSpace();
 
 <style lang="scss" scoped>
 .header {
-    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 6%);
+    //box-shadow: 0 3px 10px 0 rgb(0 0 0 / 6%);
     height: 56px;
     padding-left: 24px;
     padding-right: 24px;
@@ -419,7 +419,7 @@ getUseSpace();
         .menu-list {
             height: calc(100vh - 56px);
             width: 80px;
-            box-shadow: 0 3px 10px 0 rgb(0 0 0 /6%);
+            //box-shadow: 0 3px 10px 0 rgb(0 0 0 /6%);
             border-right: 1px solid #f1f2f4;
             .menu-item {
                 text-align: center;

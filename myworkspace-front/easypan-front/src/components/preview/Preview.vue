@@ -21,10 +21,6 @@
       :url="url"
       v-if="fileInfo.fileType == 7 || fileInfo.fileType == 8"
     ></PreviewTxt>
-    <PreviewMarkdown
-      :url="url"
-      v-if="fileInfo.fileType == 11"
-    ></PreviewMarkdown>
     <PreviewMusic
       :url="url"
       :fileName="fileInfo.fileName"
@@ -46,7 +42,6 @@ import PreviewDoc from "@/components/preview/PreviewDoc.vue";
 import PreviewExcel from "@/components/preview/PreviewExcel.vue";
 import PreviewPdf from "@/components/preview/PreviewPdf.vue";
 import PreviewTxt from "@/components/preview/PreviewTxt.vue";
-import PreviewMarkdown from "@/components/preview/PreviewMarkdown.vue";
 import PreviewMusic from "@/components/preview/PreviewMusic.vue";
 import PreviewDownload from "@/components/preview/PreviewDownload.vue";
 
