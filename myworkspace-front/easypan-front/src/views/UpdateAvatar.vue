@@ -7,19 +7,20 @@
           width="500px"
           :showCancel="false"
           @close="dialogConfig.show = false"
-          >
+          class="avatar-dialog"
+        >
         <el-form
           :model="formData"
           ref="formDataRef"
           label-width="80px"
           @submit.prevent
+          class="avatar-form"
         >
-        <!-- 头像上传修改 -->
-        <el-form-item label="昵称">
-            {{ formData.nickName }}
+        <el-form-item label="昵称" class="nickname-item">
+            <span class="nickname-text">{{ formData.nickName }}</span>
         </el-form-item>
 
-        <el-form-item label="头像" prop="">
+        <el-form-item label="头像" class="avatar-item">
           <AvatarUpload v-model="formData.avatar"></AvatarUpload>
         </el-form-item>
        </el-form>
@@ -57,29 +58,11 @@ const dialogConfig = ref({
             click: (e) => {
                 submitForm();
             },
-            class: "select-button",
-            style: {
-                backgroundColor: "#409eff",
-                borderColor: "#409eff",
-                color: "#fff",
-                boxShadow: "none",
-                outline: "none",
-                border: "none",
-                transition: "none",
-                "&:hover": {
-                    backgroundColor: "#66b1ff",
-                    borderColor: "#66b1ff",
-                    boxShadow: "none",
-                    border: "none",
-                    transform: "none"
-                },
-                "&:before, &:after": {
-                    display: "none"
-                }
-            }
+            class: "confirm-button",
         },
     ],
 });
+
 const emit = defineEmits();
 const submitForm = async () => {
     if (!(formData.value.avatar instanceof File)) {
@@ -105,4 +88,41 @@ const submitForm = async () => {
 </script>
 
 <style lang="scss" scoped>
+.avatar-dialog {
+    :deep(.el-dialog__body) {
+        padding: 30px 20px;
+    }
+}
+
+.avatar-form {
+    .nickname-item {
+        margin-bottom: 30px;
+        
+        .nickname-text {
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 500;
+        }
+    }
+    
+    .avatar-item {
+        margin-bottom: 0;
+    }
+}
+
+.confirm-button {
+    background-color: #409eff;
+    border-color: #409eff;
+    color: #fff;
+    padding: 8px 24px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: #66b1ff;
+        border-color: #66b1ff;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(64, 158, 255, 0.2);
+    }
+}
 </style>

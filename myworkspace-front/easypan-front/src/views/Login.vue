@@ -451,7 +451,7 @@ const qqLogin = async () => {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: url('@/assets/login-bg.jpg') center/cover;
+        //background: url('@/assets/login_bg.png') center/cover;
         filter: blur(10px);
         transform: scale(1.1);
         z-index: 0;
