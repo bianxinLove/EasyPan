@@ -130,21 +130,25 @@
              </div>
             </el-form-item>
             <!-- 登录 -->
-            <el-form-item v-if="opType == 1">
-                <div class="rememberme=panel">
-                    <el-checkbox v-model="formData.rememberMe">记住我</el-checkbox>
+            <el-form-item v-if="opType == 1" class="login-options">
+                <div class="left-options">
+                    <el-checkbox v-model="formData.rememberMe" class="remember-checkbox">记住我</el-checkbox>
                 </div>
-                <div class="no-account">
-                    <a href="javascript:void(0)" class="a-link" @click="showPanel(2)">忘记密码?</a>
-                    <a href="javascript:void(0)" class="a-link" @click="showPanel(0)">没有账号?</a>
+                <div class="right-options">
+                    <a href="javascript:void(0)" class="text-btn" @click="showPanel(2)">忘记密码?</a>
+                    <a href="javascript:void(0)" class="text-btn" @click="showPanel(0)">没有账号?</a>
                 </div>
             </el-form-item>
             <!-- 找回密码 -->
             <el-form-item v-if="opType == 2">
-                    <a href="javascript:void(0)" class="a-link" @click="showPanel(1)">去登录?</a>
+                <div class="single-link">
+                    <a href="javascript:void(0)" class="text-btn" @click="showPanel(1)">去登录?</a>
+                </div>
             </el-form-item>
             <el-form-item v-if="opType == 0">
-                    <a href="javascript:void(0)" class="a-link" @click="showPanel(1)">已有账号?</a>
+                <div class="single-link">
+                    <a href="javascript:void(0)" class="text-btn" @click="showPanel(1)">已有账号?</a>
+                </div>
             </el-form-item>
             <!-- 登录按钮 -->
             <el-form-item>
@@ -435,140 +439,293 @@ const qqLogin = async () => {
 
 <style lang="scss" scoped>
 .login-body {
-    height: calc(100vh);
-    background-size: cover;
-    //background: url("../assets/login_bg.jpg");
-    background: url("../assets/share_bg.png");
+    height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+
     .bg {
-        flex: 1;
-        background-size: cover;
-        background-position: left;
-        background-size: 660px;
-        background-repeat: no-repeat;
-        //background-image: url("../assets/login_img.svg");
-    }
-    .login-panel {
-        width: 430px;
-        margin-right: 5%;
-        margin-top: calc((100vh - 550px) / 2);
-        .login-register {
-            padding: 25px;
-            background: #fff;
-            border-radius: 5px;
-            .login-title {
-                text-align: center;
-                font-size: 18px;
-                font-weight: bold;
-                //color: #e704fc;
-                color: #4F4F4F;
-                letter-spacing: 1px;
-                margin-bottom: 20px;
-                animation-name: glitched;
-                animation-duration: calc(.8s * 1.4);
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-                }
-                @keyframes glitched {
-                0% { left: -4px; transform: skew(-20deg); }
-                11% { left: 2px; transform: skew(0deg); }
-                50% { transform: skew(0deg); }
-                51% { transform: skew(10deg); }
-                60% { transform: skew(0deg); }
-                100% { transform: skew(0deg); }
-            }
-            .send-email-panel {
-                display: flex;
-                width: 100%;
-                justify-content: space-between;
-                .send-mail-btn {
-                    margin-left: 5px;
-                    //background: linear-gradient(45deg, transparent 5%, #f701ff 5%);
-                    background: linear-gradient(45deg, transparent 5%, #4F4F4F 5%);
-                    border: 0;
-                    letter-spacing: 1px;
-                    line-height: 44px;
-                    //box-shadow: 3px 0px 0px #04ebfc;
-                    outline: transparent;
-                    position: relative;
-                }
-            }
-            .rememberme-panel {
-                width: 100%;
-            }
-            .no-account {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-            }
-            .op-btn {
-                width: 100%;
-                //background: linear-gradient(45deg, transparent 5%, #f701ff 5%);
-                background: linear-gradient(45deg, transparent 5%, #4F4F4F 5%);
-                border: 0;
-                color: #fff;
-                letter-spacing: 3px;
-                line-height: 33px;
-                //box-shadow: 6px 0px 0px #04ebfc;
-                outline: transparent;
-                position: relative;
-                }
-                //button::after {
-                //--slice-0: inset(50% 50% 50% 50%);
-                //--slice-1: inset(80% -6px 0 0);
-                //--slice-2: inset(50% -6px 30% 0);
-                //--slice-3: inset(10% -6px 85% 0);
-                //--slice-4: inset(40% -6px 43% 0);
-                //--slice-5: inset(80% -6px 5% 0);
-                //content: 'LanVinci';
-                //display: block;
-                //position: absolute;
-                //top: 0;
-                //left: 0;
-                //right: 0;
-                //bottom: 0;
-                //background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #ff0101 5%);
-                //text-shadow: -3px -3px 0px #f8f405, 3px 3px 0px #00E6F6;
-                //clip-path: var(--slice-0);
-                //}
-                button:hover::after {
-                animation: 1s glitch;
-                animation-timing-function: steps(2, end);
-                }
-                @keyframes glitch {
-                0% { clip-path: var(--slice-1); transform: translate(-20px, -10px); }
-                10% { clip-path: var(--slice-3); transform: translate(10px, 10px); }
-                20% { clip-path: var(--slice-1); transform: translate(-10px, 10px); }
-                30% { clip-path: var(--slice-3); transform: translate(0px, 5px); }
-                40% { clip-path: var(--slice-2); transform: translate(-5px, 0px); }
-                50% { clip-path: var(--slice-3); transform: translate(5px, 0px); }
-                60% { clip-path: var(--slice-4); transform: translate(5px, 10px); }
-                70% { clip-path: var(--slice-2); transform: translate(-10px, 10px); }
-                80% { clip-path: var(--slice-5); transform: translate(20px, -10px); }
-                90% { clip-path: var(--slice-1); transform: translate(-10px, 0px); }
-                100% { clip-path: var(--slice-1); transform: translate(0); }
-                }
-            }
-        }
-    .check-code-panel {
+        position: absolute;
         width: 100%;
-        display: flex;
-        .check-code {
-            margin-left: 5px;
-            cursor: pointer;
+        height: 100%;
+        background: url('@/assets/login-bg.jpg') center/cover;
+        filter: blur(10px);
+        transform: scale(1.1);
+        z-index: 0;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
         }
     }
-    .login-btn-qq {
-        margin-top: 20px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-            cursor: pointer;
-            margin-left: 10px;
-            width: 20px;
+
+    .login-panel {
+        position: relative;
+        z-index: 1;
+        width: 420px;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        transform: translateY(0);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.35);
+        }
+
+        .login-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            color: transparent;
+            position: relative;
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 50px;
+                height: 3px;
+                background: linear-gradient(to right, #667eea, #764ba2);
+                border-radius: 3px;
+            }
+        }
+
+        .el-input {
+            --el-input-height: 50px;
+            margin-bottom: 20px;
+
+            .el-input__wrapper {
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 12px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+
+                &:hover, &.is-focus {
+                    border-color: #667eea;
+                    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+                }
+            }
+
+            .iconfont {
+                font-size: 20px;
+                color: #667eea;
+            }
+        }
+
+        .send-email-panel {
+            display: flex;
+            gap: 10px;
+
+            .send-mail-btn {
+                flex-shrink: 0;
+                background: linear-gradient(to right, #667eea, #764ba2);
+                border: none;
+                border-radius: 12px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+                }
+            }
+        }
+
+        .check-code-panel {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            .check-code {
+                height: 50px;
+                border-radius: 12px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 0 20px;
+            padding: 0 2px;
+            position: relative;
+
+            .left-options {
+                .remember-checkbox {
+                    :deep(.el-checkbox__input) {
+                        .el-checkbox__inner {
+                            width: 16px;
+                            height: 16px;
+                            border-color: #667eea;
+                            background-color: transparent;
+                            
+                            &::after {
+                                height: 8px;
+                                left: 5px;
+                                top: 2px;
+                            }
+                        }
+                        
+                        &.is-checked .el-checkbox__inner {
+                            background-color: #667eea;
+                            border-color: #667eea;
+                        }
+                    }
+                    
+                    :deep(.el-checkbox__label) {
+                        color: #666;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .right-options {
+                display: flex;
+                gap: 24px;
+                margin-left: auto;
+                padding-left: 40px;
+
+                .text-btn {
+                    color: #667eea;
+                    font-size: 14px;
+                    text-decoration: none;
+                    position: relative;
+                    
+                    &:first-child::after {
+                        content: '';
+                        position: absolute;
+                        right: -12px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 1px;
+                        height: 12px;
+                        background-color: #ddd;
+                    }
+
+                    &:hover {
+                        color: #764ba2;
+                    }
+                }
+            }
+        }
+
+        .single-link {
+            text-align: right;
+            margin: -10px 0 15px;
+
+            .text-btn {
+                color: #667eea;
+                font-size: 14px;
+                text-decoration: none;
+
+                &:hover {
+                    color: #764ba2;
+                }
+            }
+        }
+
+        .op-btn {
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            }
+        }
+
+        .login-btn-qq {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+
+            img {
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1) rotate(360deg);
+                }
+            }
         }
     }
+}
+
+// 弹窗样式优化
+:deep(.el-dialog) {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    .el-dialog__header {
+        margin: 0;
+        padding: 20px;
+        background: linear-gradient(to right, #667eea, #764ba2);
+        
+        .el-dialog__title {
+            color: white;
+            font-weight: 600;
+        }
+    }
+
+    .el-dialog__body {
+        padding: 30px;
+    }
+
+    .el-form-item__label {
+        font-weight: 500;
+    }
+}
+
+// 动画效果
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-panel {
+    animation: fadeInUp 0.6s ease-out;
 }
 </style>
