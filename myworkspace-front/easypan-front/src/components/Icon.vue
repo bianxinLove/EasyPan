@@ -1,7 +1,15 @@
 <template>
-    <span :style="{ width: width + 'px', height: width + 'px' }" class="icon">
-        <img :src="getImage()" :style="{ 'object-fit': fit }" />
-    </span>
+    <div :style="{ width: width + 'px', height: width + 'px' }" class="icon-wrapper">
+        <div class="icon-container">
+            <img 
+                :src="getImage()" 
+                :style="{ 'object-fit': fit }" 
+                class="icon-image"
+                :class="{'is-cover': !!cover}"
+                @error="handleImageError"
+            />
+        </div>
+    </div>
 </template>
 
 <script setup>
@@ -57,17 +65,47 @@ const getImage = () => {
     }
     return new URL(`/src/assets/icon-image/${icon}.png`, import.meta.url).href;
 };
+
+const handleImageError = (e) => {
+    // 如果是封面图加载失败，使用默认图片图标
+    if (props.cover) {
+        e.target.src = new URL(`/src/assets/icon-image/image.png`, import.meta.url).href;
+    }
+};
 </script>
 
 <style lang="scss" scoped>
-.icon {
-    text-align: center;
-    display: inline-block;
-    border-radius: 3px;
-    overflow: hidden;
-    img {
+.icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    .icon-container {
         width: 100%;
         height: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+        background: #f5f7fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background: #e4e7ed;
+        }
+        
+        .icon-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 2px;
+            
+            &.is-cover {
+                padding: 0;
+                object-fit: cover;
+            }
+        }
     }
 }
 </style>
