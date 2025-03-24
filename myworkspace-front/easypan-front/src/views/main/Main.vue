@@ -491,5 +491,208 @@ const share = (row) => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/file.list.scss";
+.top {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+
+    .top-op {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        gap: 10px;
+
+        .btn {
+            .el-button {
+                border-radius: 6px;
+                padding: 10px 20px;
+                transition: all 0.3s;
+                
+                &:hover {
+                    transform: translateY(-2px);
+                }
+
+                .iconfont {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .search-panel {
+            flex: 1;
+            margin: 0 15px;
+
+            .el-input {
+                .el-input__wrapper {
+                    border-radius: 20px;
+                    box-shadow: 0 0 0 1px #dcdfe6 inset;
+                    
+                    &:hover {
+                        box-shadow: 0 0 0 1px #409eff inset;
+                    }
+                }
+
+                .icon-search {
+                    cursor: pointer;
+                    color: #909399;
+                    font-size: 16px;
+                    
+                    &:hover {
+                        color: #409eff;
+                    }
+                }
+            }
+        }
+
+        .icon-refresh {
+            font-size: 20px;
+            color: #909399;
+            cursor: pointer;
+            transition: all 0.3s;
+            
+            &:hover {
+                color: #409eff;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.file-list {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+
+    .file-item {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        border-radius: 6px;
+        transition: all 0.3s;
+        
+        &:hover {
+            background: #f5f7fa;
+        }
+
+        .file-name {
+            margin-left: 10px;
+            flex: 1;
+            cursor: pointer;
+            color: #606266;
+
+            &:hover {
+                color: #409eff;
+            }
+
+            .transfer-status {
+                margin-left: 10px;
+                font-size: 12px;
+                padding: 2px 6px;
+                border-radius: 4px;
+                background: #e6a23c;
+                color: #fff;
+
+                &.transfer-fail {
+                    background: #f56c6c;
+                }
+            }
+        }
+
+        .op {
+            display: none;
+            gap: 15px;
+
+            .iconfont {
+                cursor: pointer;
+                font-size: 14px;
+                color: #606266;
+                
+                &:hover {
+                    color: #409eff;
+                }
+            }
+        }
+
+        &:hover .op {
+            display: flex;
+        }
+
+        .edit-panel {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .el-input {
+                .el-input__wrapper {
+                    border-radius: 4px;
+                }
+            }
+
+            .iconfont {
+                cursor: pointer;
+                font-size: 16px;
+
+                &.icon-right1 {
+                    color: #67c23a;
+                    
+                    &.not-allow {
+                        color: #c0c4cc;
+                        cursor: not-allowed;
+                    }
+                }
+
+                &.icon-error {
+                    color: #f56c6c;
+                }
+            }
+        }
+    }
+}
+
+.no-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+
+    .no-data-inner {
+        text-align: center;
+
+        .tips {
+            color: #909399;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        .op-list {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+
+            .op-item {
+                cursor: pointer;
+                padding: 20px;
+                border-radius: 8px;
+                transition: all 0.3s;
+                
+                &:hover {
+                    background: #f5f7fa;
+                    transform: translateY(-2px);
+                }
+
+                div {
+                    margin-top: 10px;
+                    color: #606266;
+                }
+            }
+        }
+    }
+}
 </style>

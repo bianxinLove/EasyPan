@@ -3,7 +3,7 @@
       <div class="header">
         <div class="logo">
             <span class="iconfont icon-pan"></span>
-            <div class="name">忭忻云盘</div>
+            <div class="name">个人云盘</div>
         </div>
         <div class="right-panel">
             <el-popover
