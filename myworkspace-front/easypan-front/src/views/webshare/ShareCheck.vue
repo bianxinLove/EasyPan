@@ -1,11 +1,9 @@
 <template>
     <div class="share">
+        <div class="bg"></div>
         <div class="body-content">
-            <div class="logo">
-                <span class="iconfont icon-pan"></span>
-                <span class="name">个人云盘</span>
-            </div>
-            <div class="code-panel">
+            <div class="share-panel">
+                <div class="share-title">分享文件</div>
                 <div class="file-info">
                     <div class="avatar">
                         <Avatar
@@ -23,7 +21,7 @@
                     </div>
                 </div>
                 <div class="code-body">
-                    <div class="tips">请输入提取码: </div>
+                    <div class="tips">请输入提取码</div>
                     <div class="input-area">
                         <el-form
                           :model="formData"
@@ -31,17 +29,19 @@
                           ref="formDataRef"
                           @submit.prevent
                         >
-                          <!-- 输入框 -->
                           <el-form-item prop="code">
                             <el-input
                               class="input"
                               clearable
                               v-model.trim="formData.code"
                               @keyup.enter="checkShare"
-                            ></el-input>
-                            <el-button class="get-btn" type="primary" @click="checkShare"
-                              >提取文件</el-button
+                              placeholder="请输入5位提取码"
                             >
+                                <template #prefix>
+                                    <span class="iconfont icon-checkcode"></span>
+                                </template>
+                            </el-input>
+                            <el-button class="get-btn" type="primary" @click="checkShare">提取文件</el-button>
                           </el-form-item>
                         </el-form>
                     </div>
@@ -113,137 +113,183 @@ const checkShare = async () => {
 
 <style lang="scss" scoped>
 .share {
-    height: calc(100vh);
-    background: url("../../assets/share_bg.png");
-    background-repeat: repeat-x;
-    background-position: 0 bottom;
-    background-color: #eef2f6;
+    height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
-    .body-content {
-        margin-top: calc(100vh / 5);
-        width: 500px;
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .icon-pan {
-                font-size: 60px;
-                color: #01f7ff;
-            }
-            .name {
-                font-weight: bold;
-                margin-left: 5px;
-                font-size: 25px;
-                color: #01f7ff;
-                animation-name: glitched;
-                animation-duration: calc(.9s * 3.5);
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-                }
-                @keyframes glitched {
-                0% { left: -4px; transform: skew(-20deg); }
-                11% { left: 2px; transform: skew(0deg); }
-                50% { transform: skew(0deg); }
-                51% { transform: skew(10deg); }
-                60% { transform: skew(0deg); }
-                100% { transform: skew(0deg); }
-            }
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+
+    .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        filter: blur(10px);
+        transform: scale(1.1);
+        z-index: 0;
+        background: inherit;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
         }
-        .code-panel {
-            margin-top: 20px;
-            background: #fff;
-            border-radius: 5px;
-            overflow: hidden;
-            //box-shadow: 0 0 7px 1px #5757574f;
+    }
+
+    .body-content {
+        position: relative;
+        z-index: 1;
+        width: 500px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .share-panel {
+            .share-title {
+                font-size: 24px;
+                font-weight: 600;
+                color: #333;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
             .file-info {
-                padding: 10px 20px;
-                background: #01f7ff;
+                padding: 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-radius: 10px;
                 color: #fff;
                 display: flex;
                 align-items: center;
+                margin-bottom: 25px;
+                
                 .avatar {
-                    margin-right: 5px;
+                    margin-right: 15px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 2px solid rgba(255, 255, 255, 0.3);
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        border-color: rgba(255, 255, 255, 0.8);
+                    }
                 }
+                
                 .share-info {
+                    flex: 1;
+                    
                     .user-info {
                         display: flex;
                         align-items: center;
+                        margin-bottom: 8px;
+                        
                         .nick-name {
-                            font-size: 15px;
-                            color: #af01ff;
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: #fff;
                         }
+                        
                         .share-time {
-                            margin-left: 20px;
-                            font-size: 12px;
-                            color: #af01ff;
+                            margin-left: 15px;
+                            font-size: 13px;
+                            color: rgba(255, 255, 255, 0.9);
                         }
                     }
+                    
                     .file-name {
-                        color: #af01ff;
-                        margin-top: 10px;
-                        font-size: 12px;
+                        font-size: 14px;
+                        color: rgba(255, 255, 255, 0.9);
                     }
                 }
             }
+
             .code-body {
-                padding: 30px 20px 60px 20px;
                 .tips {
-                    font-weight: bold;
+                    font-size: 16px;
+                    color: #666;
+                    margin-bottom: 15px;
+                    text-align: center;
                 }
+
                 .input-area {
-                    margin-top: 15px;
-                    .input {
-                        flex: 1;
-                        margin-right: 10px;
+                    :deep(.el-form-item) {
+                        margin-bottom: 0;
                     }
+
+                    :deep(.el-input) {
+                        .el-input__wrapper {
+                            border-radius: 8px;
+                            padding: 8px 15px;
+                            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+                            transition: all 0.3s ease;
+
+                            &:hover, &.is-focus {
+                                box-shadow: 0 4px 16px rgba(102, 126, 234, 0.15);
+                            }
+                        }
+
+                        .el-input__inner {
+                            font-size: 15px;
+                            letter-spacing: 2px;
+                        }
+
+                        .iconfont {
+                            color: #667eea;
+                            font-size: 18px;
+                        }
+                    }
+
                     .get-btn {
-                        background: linear-gradient(45deg, transparent 5%, #ea01ff 5%);
-                        border: 0;
-                        color: #fff;
-                        line-height: 33px;
-                        //box-shadow: 6px 0px 0px #04ebfc;
-                        outline: transparent;
-                        position: relative;
+                        margin-top: 20px;
+                        width: 100%;
+                        height: 44px;
+                        font-size: 16px;
+                        border-radius: 8px;
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        border: none;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            transform: translateY(-2px);
+                            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
                         }
-                        //button::after {
-                        //--slice-0: inset(50% 50% 50% 50%);
-                        //--slice-1: inset(80% -6px 0 0);
-                        //--slice-2: inset(50% -6px 30% 0);
-                        //--slice-3: inset(10% -6px 85% 0);
-                        //--slice-4: inset(40% -6px 43% 0);
-                        //--slice-5: inset(80% -6px 5% 0);
-                        //content: 'LanVinci';
-                        //display: block;
-                        //position: absolute;
-                        //top: 0;
-                        //left: 0;
-                        //right: 0;
-                        //bottom: 0;
-                        //background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #ff0101 5%);
-                        //text-shadow: -3px -3px 0px #f8f405, 3px 3px 0px #00E6F6;
-                        //clip-path: var(--slice-0);
-                        //}
-                        button:hover::after {
-                        animation: 1s glitch;
-                        animation-timing-function: steps(2, end);
+
+                        &:active {
+                            transform: translateY(0);
                         }
-                        @keyframes glitch {
-                        0% { clip-path: var(--slice-1); transform: translate(-20px, -10px); }
-                        10% { clip-path: var(--slice-3); transform: translate(10px, 10px); }
-                        20% { clip-path: var(--slice-1); transform: translate(-10px, 10px); }
-                        30% { clip-path: var(--slice-3); transform: translate(0px, 5px); }
-                        40% { clip-path: var(--slice-2); transform: translate(-5px, 0px); }
-                        50% { clip-path: var(--slice-3); transform: translate(5px, 0px); }
-                        60% { clip-path: var(--slice-4); transform: translate(5px, 10px); }
-                        70% { clip-path: var(--slice-2); transform: translate(-10px, 10px); }
-                        80% { clip-path: var(--slice-5); transform: translate(20px, -10px); }
-                        90% { clip-path: var(--slice-1); transform: translate(-10px, 0px); }
-                        100% { clip-path: var(--slice-1); transform: translate(0); }
                     }
                 }
             }
         }
     }
+}
+
+// 动画效果
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.share-panel {
+    animation: fadeInUp 0.6s ease-out;
 }
 </style>

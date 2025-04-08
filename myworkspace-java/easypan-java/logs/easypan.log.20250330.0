@@ -1,0 +1,330 @@
+2025-03-30 00:00:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:00:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:00:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:00:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2025-03-30 00:00:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c1c3543] was not registered for synchronization because synchronization is not active
+2025-03-30 00:00:38 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2025-03-30 00:00:38 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [HikariProxyConnection@1143549897 wrapping com.mysql.cj.jdbc.ConnectionImpl@74c26e64] will not be managed by Spring
+2025-03-30 00:00:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2025-03-30 00:00:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2025-03-30 00:00:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2025-03-30 00:00:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c1c3543]
+2025-03-30 00:00:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:00:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:00:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:01:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:01:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:01:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:01:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:01:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:01:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:02:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:02:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:02:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:02:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:02:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:02:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:03:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:03:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:03:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:03:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2025-03-30 00:03:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fbf21e7] was not registered for synchronization because synchronization is not active
+2025-03-30 00:03:38 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2025-03-30 00:03:38 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [HikariProxyConnection@1020984210 wrapping com.mysql.cj.jdbc.ConnectionImpl@74c26e64] will not be managed by Spring
+2025-03-30 00:03:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2025-03-30 00:03:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2025-03-30 00:03:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2025-03-30 00:03:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fbf21e7]
+2025-03-30 00:03:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:03:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:03:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:04:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:04:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:04:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:04:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:04:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:04:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:05:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:05:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:05:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:05:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:05:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:05:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:06:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:06:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:06:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:06:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2025-03-30 00:06:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6dc9d6bd] was not registered for synchronization because synchronization is not active
+2025-03-30 00:06:38 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2025-03-30 00:06:38 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [HikariProxyConnection@830175374 wrapping com.mysql.cj.jdbc.ConnectionImpl@74c26e64] will not be managed by Spring
+2025-03-30 00:06:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2025-03-30 00:06:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2025-03-30 00:06:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2025-03-30 00:06:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6dc9d6bd]
+2025-03-30 00:06:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:06:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:06:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:07:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:07:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:07:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:07:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:07:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:07:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:08:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:08:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:08:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:08:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:08:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:08:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:09:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:09:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:09:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:09:35 [DEBUG][com.zaxxer.hikari.pool.PoolBase][quietlyCloseConnection][134]-> HikariCPDatasource - Closing connection com.mysql.cj.jdbc.ConnectionImpl@74c26e64: (connection has passed maxLifetime)
+2025-03-30 00:09:35 [DEBUG][com.zaxxer.hikari.pool.HikariPool][call][729]-> HikariCPDatasource - Added connection com.mysql.cj.jdbc.ConnectionImpl@8d72368
+2025-03-30 00:09:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2025-03-30 00:09:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@520a1466] was not registered for synchronization because synchronization is not active
+2025-03-30 00:09:38 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2025-03-30 00:09:38 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [HikariProxyConnection@1381167010 wrapping com.mysql.cj.jdbc.ConnectionImpl@1e739e6f] will not be managed by Spring
+2025-03-30 00:09:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2025-03-30 00:09:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2025-03-30 00:09:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2025-03-30 00:09:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@520a1466]
+2025-03-30 00:09:39 [DEBUG][com.zaxxer.hikari.pool.PoolBase][quietlyCloseConnection][134]-> HikariCPDatasource - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1e739e6f: (connection has passed maxLifetime)
+2025-03-30 00:09:39 [DEBUG][com.zaxxer.hikari.pool.HikariPool][call][729]-> HikariCPDatasource - Added connection com.mysql.cj.jdbc.ConnectionImpl@49ea2953
+2025-03-30 00:09:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:09:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:09:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:10:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:10:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:10:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:10:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:10:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:10:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:10:50 [DEBUG][com.zaxxer.hikari.pool.PoolBase][quietlyCloseConnection][134]-> HikariCPDatasource - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4122bab0: (connection has passed maxLifetime)
+2025-03-30 00:10:50 [DEBUG][com.zaxxer.hikari.pool.HikariPool][call][729]-> HikariCPDatasource - Added connection com.mysql.cj.jdbc.ConnectionImpl@20976b49
+2025-03-30 00:11:08 [DEBUG][com.zaxxer.hikari.pool.PoolBase][quietlyCloseConnection][134]-> HikariCPDatasource - Closing connection com.mysql.cj.jdbc.ConnectionImpl@17df337f: (connection has passed maxLifetime)
+2025-03-30 00:11:08 [DEBUG][com.zaxxer.hikari.pool.HikariPool][call][729]-> HikariCPDatasource - Added connection com.mysql.cj.jdbc.ConnectionImpl@72e1531f
+2025-03-30 00:11:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:11:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:11:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:11:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:11:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:11:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:11:58 [DEBUG][com.zaxxer.hikari.pool.PoolBase][quietlyCloseConnection][134]-> HikariCPDatasource - Closing connection com.mysql.cj.jdbc.ConnectionImpl@388dac9: (connection has passed maxLifetime)
+2025-03-30 00:11:58 [DEBUG][com.zaxxer.hikari.pool.HikariPool][call][729]-> HikariCPDatasource - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f57d5ae
+2025-03-30 00:12:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:12:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:12:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:12:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2025-03-30 00:12:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@bb1cae6] was not registered for synchronization because synchronization is not active
+2025-03-30 00:12:38 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2025-03-30 00:12:38 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [HikariProxyConnection@1277664063 wrapping com.mysql.cj.jdbc.ConnectionImpl@8d72368] will not be managed by Spring
+2025-03-30 00:12:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2025-03-30 00:12:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2025-03-30 00:12:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2025-03-30 00:12:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@bb1cae6]
+2025-03-30 00:12:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:12:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:12:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:13:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:13:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:13:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:13:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:13:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:13:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:14:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:14:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:14:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:14:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:14:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:14:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:15:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:15:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:15:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:15:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2025-03-30 00:15:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12314c34] was not registered for synchronization because synchronization is not active
+2025-03-30 00:15:38 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2025-03-30 00:15:38 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [HikariProxyConnection@29610206 wrapping com.mysql.cj.jdbc.ConnectionImpl@8d72368] will not be managed by Spring
+2025-03-30 00:15:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2025-03-30 00:15:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2025-03-30 00:15:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2025-03-30 00:15:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12314c34]
+2025-03-30 00:15:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:15:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:15:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:16:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:16:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:16:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:16:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:16:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:16:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:17:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:17:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:17:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:17:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:17:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:17:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:18:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:18:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:18:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:18:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2025-03-30 00:18:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c4a7a3e] was not registered for synchronization because synchronization is not active
+2025-03-30 00:18:38 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2025-03-30 00:18:38 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [HikariProxyConnection@408639385 wrapping com.mysql.cj.jdbc.ConnectionImpl@8d72368] will not be managed by Spring
+2025-03-30 00:18:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2025-03-30 00:18:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2025-03-30 00:18:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2025-03-30 00:18:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c4a7a3e]
+2025-03-30 00:18:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:18:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:18:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:19:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:19:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:19:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:19:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:19:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:19:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:20:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:20:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:20:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:20:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:20:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:20:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:21:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:21:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:21:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:21:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2025-03-30 00:21:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@452c0369] was not registered for synchronization because synchronization is not active
+2025-03-30 00:21:38 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2025-03-30 00:21:38 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [HikariProxyConnection@160622001 wrapping com.mysql.cj.jdbc.ConnectionImpl@8d72368] will not be managed by Spring
+2025-03-30 00:21:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2025-03-30 00:21:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2025-03-30 00:21:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2025-03-30 00:21:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@452c0369]
+2025-03-30 00:21:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:21:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:21:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:22:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:22:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:22:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:22:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:22:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:22:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:23:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:23:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:23:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:23:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:23:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:23:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:24:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:24:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:24:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:24:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2025-03-30 00:24:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@662ee747] was not registered for synchronization because synchronization is not active
+2025-03-30 00:24:38 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2025-03-30 00:24:38 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [HikariProxyConnection@258582202 wrapping com.mysql.cj.jdbc.ConnectionImpl@8d72368] will not be managed by Spring
+2025-03-30 00:24:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2025-03-30 00:24:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2025-03-30 00:24:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2025-03-30 00:24:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@662ee747]
+2025-03-30 00:24:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:24:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:24:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:25:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:25:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:25:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:25:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:25:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:25:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:26:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:26:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:26:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:26:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:26:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:26:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:27:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:27:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:27:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:27:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2025-03-30 00:27:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39efde53] was not registered for synchronization because synchronization is not active
+2025-03-30 00:27:38 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2025-03-30 00:27:38 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [HikariProxyConnection@702089867 wrapping com.mysql.cj.jdbc.ConnectionImpl@8d72368] will not be managed by Spring
+2025-03-30 00:27:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2025-03-30 00:27:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2025-03-30 00:27:38 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2025-03-30 00:27:38 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39efde53]
+2025-03-30 00:27:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:27:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:27:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:28:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:28:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:28:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:28:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:28:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:28:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:29:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:29:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:29:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:29:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:29:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:29:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:30:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:30:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:30:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:30:39 [DEBUG][org.mybatis.spring.SqlSessionUtils][getSqlSession][97]-> Creating a new SqlSession
+2025-03-30 00:30:39 [DEBUG][org.mybatis.spring.SqlSessionUtils][registerSessionHolder][148]-> SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1617127a] was not registered for synchronization because synchronization is not active
+2025-03-30 00:30:39 [DEBUG][org.springframework.jdbc.datasource.DataSourceUtils][doGetConnection][116]-> Fetching JDBC Connection from DataSource
+2025-03-30 00:30:39 [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction][openConnection][87]-> JDBC Connection [HikariProxyConnection@629652630 wrapping com.mysql.cj.jdbc.ConnectionImpl@8d72368] will not be managed by Spring
+2025-03-30 00:30:39 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==>  Preparing: SELECT file_id ,user_id,file_md5,file_pid,file_size, file_name,file_cover,file_path,create_time,last_update_time, folder_type,file_category,file_type,status,recovery_time, del_flag FROM file_info f WHERE del_flag = ? and recovery_time< date_sub(now(),interval 10 day) 
+2025-03-30 00:30:39 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> ==> Parameters: 1(Integer)
+2025-03-30 00:30:39 [DEBUG][com.easypan.mappers.FileInfoMapper.selectList][debug][159]-> <==      Total: 0
+2025-03-30 00:30:39 [DEBUG][org.mybatis.spring.SqlSessionUtils][closeSqlSession][191]-> Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1617127a]
+2025-03-30 00:30:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:30:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:30:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:31:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:31:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:31:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:31:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:31:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:31:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:32:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:32:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:32:18 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:32:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before cleanup stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:32:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After cleanup  stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:32:48 [DEBUG][com.zaxxer.hikari.pool.HikariPool][fillPool][518]-> HikariCPDatasource - Fill pool skipped, pool is at sufficient level.
+2025-03-30 00:32:50 [DEBUG][org.springframework.boot.availability.ApplicationAvailabilityBean][onApplicationEvent][77]-> Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2025-03-30 00:32:50 [DEBUG][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext][doClose][1049]-> Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@15aab8c6, started on Sat Mar 29 12:48:32 CST 2025
+2025-03-30 00:32:50 [DEBUG][org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver][logKeyFound][115]-> Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+2025-03-30 00:32:50 [DEBUG][org.springframework.context.support.DefaultLifecycleProcessor][stop][365]-> Stopping beans in phase 2147483647
+2025-03-30 00:32:50 [DEBUG][org.springframework.context.support.DefaultLifecycleProcessor][lambda$doStop$3][238]-> Bean 'webServerGracefulShutdown' completed its stop procedure
+2025-03-30 00:32:50 [DEBUG][org.springframework.context.support.DefaultLifecycleProcessor][stop][365]-> Stopping beans in phase 2147483646
+2025-03-30 00:32:50 [DEBUG][org.springframework.context.support.DefaultLifecycleProcessor][lambda$doStop$3][238]-> Bean 'webServerStartStop' completed its stop procedure
+2025-03-30 00:32:50 [DEBUG][org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler][shutdown][218]-> Shutting down ExecutorService 'taskScheduler'
+2025-03-30 00:32:50 [DEBUG][org.springframework.data.redis.listener.RedisMessageListenerContainer][stop][242]-> Stopped RedisMessageListenerContainer
+2025-03-30 00:32:50 [DEBUG][org.springframework.jmx.export.annotation.AnnotationMBeanExporter][destroy][452]-> Unregistering JMX-exposed beans on shutdown
+2025-03-30 00:32:50 [DEBUG][org.springframework.jmx.export.annotation.AnnotationMBeanExporter][unregisterBeans][186]-> Unregistering JMX-exposed beans
+2025-03-30 00:32:50 [DEBUG][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor][shutdown][218]-> Shutting down ExecutorService 'applicationTaskExecutor'
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.RedisChannelHandler][closeAsync][141]-> closeAsync()
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.protocol.DefaultEndpoint][closeAsync][590]-> [channel=0x3a8a98a4, /127.0.0.1:49193 -> /127.0.0.1:6379, epid=0x1] closeAsync()
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.AbstractRedisClient][shutdownAsync][539]-> Initiate shutdown (100, 100, MILLISECONDS)
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.resource.DefaultEventLoopGroupProvider][doRelease][281]-> Release executor io.netty.channel.nio.NioEventLoopGroup@15d3793b
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.protocol.CommandHandler][channelInactive][344]-> [channel=0x3a8a98a4, /127.0.0.1:49193 -> /127.0.0.1:6379, epid=0x1, chid=0x1] channelInactive()
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.protocol.DefaultEndpoint][lambda$notifyChannelInactive$3][504]-> [channel=0x3a8a98a4, /127.0.0.1:49193 -> /127.0.0.1:6379, epid=0x1] deactivating endpoint handler
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.protocol.CommandHandler][channelInactive][368]-> [channel=0x3a8a98a4, /127.0.0.1:49193 -> /127.0.0.1:6379, epid=0x1, chid=0x1] channelInactive() done
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.protocol.ConnectionWatchdog][channelInactive][196]-> [channel=0x3a8a98a4, /127.0.0.1:49193 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelInactive()
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.protocol.ConnectionWatchdog][channelInactive][207]-> [channel=0x3a8a98a4, /127.0.0.1:49193 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] Reconnect scheduling disabled
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.protocol.CommandHandler][channelUnregistered][227]-> [channel=0x3a8a98a4, /127.0.0.1:49193 -> /127.0.0.1:6379, epid=0x1, chid=0x1] channelUnregistered()
+2025-03-30 00:32:50 [DEBUG][io.netty.buffer.PoolThreadCache][free][224]-> Freed 8 thread-local buffer(s) from thread: lettuce-nioEventLoop-4-1
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.resource.DefaultClientResources][shutdown][710]-> Initiate shutdown (0, 2, SECONDS)
+2025-03-30 00:32:50 [DEBUG][io.lettuce.core.resource.DefaultEventLoopGroupProvider][shutdown][317]-> Initiate shutdown (0, 2, SECONDS)
+2025-03-30 00:32:50 [INFO][com.zaxxer.hikari.HikariDataSource][close][350]-> HikariCPDatasource - Shutdown initiated...
+2025-03-30 00:32:50 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - Before shutdown stats (total=6, active=1, idle=5, waiting=0)
+2025-03-30 00:32:50 [DEBUG][com.zaxxer.hikari.pool.PoolBase][quietlyCloseConnection][134]-> HikariCPDatasource - Closing connection com.mysql.cj.jdbc.ConnectionImpl@8d72368: (connection evicted)
+2025-03-30 00:32:50 [DEBUG][com.zaxxer.hikari.pool.PoolBase][quietlyCloseConnection][134]-> HikariCPDatasource - Closing connection com.mysql.cj.jdbc.ConnectionImpl@49ea2953: (connection evicted)
+2025-03-30 00:32:50 [DEBUG][com.zaxxer.hikari.pool.PoolBase][quietlyCloseConnection][134]-> HikariCPDatasource - Closing connection com.mysql.cj.jdbc.ConnectionImpl@20976b49: (connection evicted)
+2025-03-30 00:32:50 [DEBUG][com.zaxxer.hikari.pool.PoolBase][quietlyCloseConnection][134]-> HikariCPDatasource - Closing connection com.mysql.cj.jdbc.ConnectionImpl@72e1531f: (connection evicted)
+2025-03-30 00:32:50 [DEBUG][com.zaxxer.hikari.pool.PoolBase][quietlyCloseConnection][134]-> HikariCPDatasource - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7f57d5ae: (connection evicted)
+2025-03-30 00:32:50 [DEBUG][com.zaxxer.hikari.pool.HikariPool][logPoolState][421]-> HikariCPDatasource - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-03-30 00:32:50 [INFO][com.zaxxer.hikari.HikariDataSource][close][352]-> HikariCPDatasource - Shutdown completed.

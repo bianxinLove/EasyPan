@@ -1,0 +1,5 @@
+[2024-03-08 22:38:21] [Msg] Table Type - Text file
+[2024-03-08 22:38:21] [Msg] Getting and Exporting data ...
+[2024-03-08 22:38:21] [Msg] Export table [tb_voucher]
+[2024-03-08 22:38:21] [Msg] Export to - C:\Users\忭忻\Desktop\tb_voucher.txt
+[2024-03-08 22:38:21] [Msg] Finished - Successfully
